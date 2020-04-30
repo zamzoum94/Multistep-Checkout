@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 
-const Order = require('./db/order');
+//const Order = require('./db/order');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -14,7 +14,9 @@ app.get('/', (req, res)=>{
 });
 
 app.post('/order', (req, res)=>{
-   let newOrder = new Order({
+    console.log('hi');
+    console.log(req.body)
+  /* let newOrder = new Order({
     _id : new mongoose.Types.ObjectId(),
     name  : req.body.user.name,
     email : req.body.user.email,
@@ -27,7 +29,7 @@ app.post('/order', (req, res)=>{
     expircy_date : req.body.user.expircyDate,
     zip_code : req.body.user.zipCode
    }); 
-
+*/
    /*
     newOrder.save()
     .then(err=>{

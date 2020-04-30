@@ -35,7 +35,9 @@ class App extends React.Component{
     event.preventDefault();
     console.log(this.user)
     // ajax request
-    let data = this.user; 
+    let data = this.user;
+    console.log(data);
+    
     alert('order submited');
     fetch('http://localhost:3000/order', {
       method : 'POST',
